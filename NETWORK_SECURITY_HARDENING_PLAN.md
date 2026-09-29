@@ -10,7 +10,7 @@ I also used PowerShell scripts on my own Windows system to check some real secur
 
 The main goal is to reduce unnecessary access, reduce the attack surface and make the network more difficult to compromise.
 
----
+
 
 ## 2. Hypothetical Company
 
@@ -33,7 +33,6 @@ The network includes:
 
 The company does not have a large IT team, so the security plan needs to be practical and not too complicated.
 
----
 
 ## 3. Basic Network Structure
 
@@ -53,7 +52,7 @@ There would also be a separate Management VLAN for the firewall, switches and ac
 
 In a real small business network, these parts should not all be placed on the same flat network.
 
----
+
 
 ## 4. Main Security Risks
 
@@ -145,7 +144,7 @@ For example, applications that are not needed for work may open ports, run backg
 
 Risk level: Medium
 
----
+
 
 ## 5. Practical Security Checks
 
@@ -166,7 +165,7 @@ The purpose was not to fully audit a real company network.
 
 I used my own computer as a small lab system so I could practice security checks and understand the results.
 
----
+
 
 ## 6. Scripts Used
 
@@ -240,7 +239,7 @@ It shows:
 - a short explanation
 - my suggestion
 
----
+
 
 ## 7. Results From My Tests
 
@@ -296,7 +295,7 @@ This is a positive result because patching helps reduce vulnerabilities that are
 
 Updates should also include browsers and third-party applications.
 
----
+
 
 ## 8. Listening Port Analysis
 
@@ -334,7 +333,7 @@ Not every open port automatically means that there is a vulnerability.
 
 The important point is to understand which process uses the port, whether the service is required, whether it is reachable from outside and whether firewall rules are protecting it.
 
----
+
 
 ## 9. Important Port Findings
 
@@ -377,7 +376,7 @@ My recommendation:
 - use firewall rules
 - do not expose it directly to the public internet
 
----
+
 
 ## 10. Print Spooler
 
@@ -391,7 +390,7 @@ Disabling unused services can reduce the attack surface.
 
 Risk: Needs Review
 
----
+
 
 ## 11. Extra Applications
 
@@ -414,7 +413,7 @@ Every additional application can create extra attack surface.
 
 Risk: Needs Review
 
----
+
 
 ## 12. Firewall Hardening
 
@@ -439,7 +438,7 @@ Example rules:
 - Internet to RDP = DENY
 - Management VLAN to Network Devices = ALLOW
 
----
+
 
 ## 13. Network Segmentation
 
@@ -462,7 +461,7 @@ It should not be able to reach internal company computers or servers.
 
 This can reduce lateral movement if one device becomes compromised.
 
----
+
 
 ## 14. Wireless Security
 
@@ -480,7 +479,7 @@ Recommended settings:
 
 The guest network should not communicate directly with the employee network.
 
----
+
 
 ## 15. Endpoint Security
 
@@ -498,7 +497,7 @@ Employees should normally use standard user accounts.
 
 Administrator accounts should only be used when administrative work is required.
 
----
+
 
 ## 16. Authentication Security
 
@@ -516,7 +515,7 @@ Passwords should be unique and should not be reused between services.
 
 A password manager can also help employees use stronger and unique passwords.
 
----
+
 
 ## 17. Administrator Accounts
 
@@ -532,7 +531,7 @@ The administrator account should only be used when changing system settings or i
 
 This reduces the possible damage if a normal user session becomes infected.
 
----
+
 
 ## 18. Remote Access
 
@@ -552,7 +551,7 @@ MFA should also be enabled for VPN access.
 
 Remote access activity should be logged.
 
----
+
 
 ## 19. Patch Management
 
@@ -575,7 +574,7 @@ Old and unsupported software should be removed.
 
 Critical security updates should be installed as soon as possible after basic testing.
 
----
+
 
 ## 20. Backup Security
 
@@ -593,7 +592,7 @@ Backup restoration should also be tested.
 
 A backup is not very useful if it cannot be restored when needed.
 
----
+
 
 ## 21. Logging and Monitoring
 
@@ -612,7 +611,7 @@ Logs can help during an incident investigation.
 
 For a larger setup, logs could be collected in a central logging system.
 
----
+
 
 ## 22. IDS and IPS
 
@@ -634,7 +633,7 @@ For example:
 
 Firewall + IDS/IPS + Endpoint Protection + Logging
 
----
+
 
 ## 23. DNS Security
 
@@ -648,7 +647,7 @@ DNS filtering can also be used to help block:
 - phishing websites
 - malware command-and-control domains
 
----
+
 
 ## 24. Email Security
 
@@ -672,7 +671,7 @@ Employees should be trained to recognize:
 - urgent payment requests
 - fake password reset messages
 
----
+
 
 ## 25. File Server Security
 
@@ -692,7 +691,7 @@ Users should not automatically have access to every shared folder.
 
 File server access should also be logged.
 
----
+
 
 ## 26. Physical Security
 
@@ -708,7 +707,7 @@ The following devices should not be freely accessible:
 
 Network equipment should be placed in a locked or restricted area.
 
----
+
 
 ## 27. Incident Response
 
@@ -739,7 +738,7 @@ Restore clean backup
 ↓  
 Change credentials
 
----
+
 
 ## 28. Basic Risk Mitigation Table
 
@@ -759,7 +758,7 @@ Change credentials
 | Weak authentication | High | Use MFA |
 | Weak backup protection | High | Use offline or off-site backup |
 
----
+
 
 ## 29. Security Improvement Priorities
 
@@ -790,7 +789,7 @@ Change credentials
 - test backup recovery
 - perform regular security reviews
 
----
+
 
 ## 30. Risk Mitigation Approach
 
@@ -818,7 +817,7 @@ The main idea of the hardening plan is to use more than one security control.
 
 This means that if one control fails, another control may still reduce the damage.
 
----
+
 
 ## 31. What I Learned
 
@@ -849,7 +848,7 @@ For example, I could not verify the SMBv1 configuration with my current permissi
 
 Instead of guessing the result, I marked it as unknown and included it as something that should be checked later.
 
----
+
 
 ## 32. Conclusion
 
@@ -871,7 +870,7 @@ These controls are not very complicated by themselves, but using them together c
 
 The practical PowerShell checks also helped me connect the theoretical security recommendations with real system settings.
 
----
+
 
 ## 33. Project Files
 
@@ -893,7 +892,7 @@ The generated result files include:
 
 These files show the checks I performed and the results used in this report.
 
----
+
 
 ## 34. AI Usage Note
 
